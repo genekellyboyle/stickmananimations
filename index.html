@@ -438,6 +438,94 @@
       margin-right: auto;
     }
 
+    /* About Me Section */
+    .about-section {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-text h3 {
+      font-size: 2.5rem;
+      color: #ff5500;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .about-subtitle {
+      font-size: 1.3rem;
+      color: #ff8c00;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .about-description {
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+
+    .about-description p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      text-align: left;
+      padding: 1.5rem;
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .highlight-item:hover {
+      transform: translateY(-5px);
+      border-color: #ff5500;
+      box-shadow: 0 10px 25px rgba(255, 85, 0, 0.2);
+    }
+
+    .highlight-icon {
+      font-size: 2rem;
+      color: #ff5500;
+      flex-shrink: 0;
+    }
+
+    .highlight-content h4 {
+      color: white;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .highlight-content p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .about-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     /* Footer */
     .footer {
       background: rgba(15, 23, 42, 0.95);
@@ -523,7 +611,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#youtube">YouTube</a></li>
         <li><a href="#animations">Animations</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About Me</a></li>
       </ul>
     </nav>
   </header>
@@ -623,7 +712,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="about" class="features">
+    <section id="features" class="features">
       <div class="feature-card">
         <div class="feature-icon">🎬</div>
         <h3>Epic Storytelling</h3>
@@ -663,6 +752,65 @@
       <div class="cta-buttons">
         <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
         <a href="#animations" class="btn btn-primary">Try Interactive Animations</a>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+      <h2 class="section-title">About the Creator</h2>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h3>🎬 Gene Kelly Boyle</h3>
+          <p class="about-subtitle">Creator of K Animates & Stickman Epic Legends</p>
+          
+          <div class="about-description">
+            <p>I'm a passionate animator and storyteller dedicated to bringing the epic adventures of Stickman to life on Animation Island. With a background in creative animation and digital storytelling, I create engaging stick figure animations that pay tribute to classic YouTube animators while pushing the boundaries of what's possible in the medium.</p>
+            
+            <p>My work focuses on fluid motion, dynamic camera angles, and over-the-top action sequences that capture the imagination of viewers worldwide. Through Stickman Epic Legends, I'm building a universe where good battles evil in epic animated showdowns, all while maintaining the authentic stick figure animation style that fans love.</p>
+            
+            <p>When I'm not animating epic battles between Stickman and the forces of Purple, I'm constantly exploring new techniques to enhance the visual storytelling and create more immersive experiences for our growing community of animation enthusiasts.</p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🎭</span>
+              <div class="highlight-content">
+                <h4>Creative Animation</h4>
+                <p>Specializing in stick figure animation with fluid motion and dynamic storytelling</p>
+              </div>
+            </div>
+            
+            <div class="highlight-item">
+              <span class="highlight-icon">📖</span>
+              <div class="highlight-content">
+                <h4>Epic Storytelling</h4>
+                <p>Creating compelling narratives that keep viewers engaged month after month</p>
+              </div>
+            </div>
+            
+            <div class="highlight-item">
+              <span class="highlight-icon">🚀</span>
+              <div class="highlight-content">
+                <h4>Content Creation</h4>
+                <p>Consistently delivering high-quality animated content on a monthly schedule</p>
+              </div>
+            </div>
+            
+            <div class="highlight-item">
+              <span class="highlight-icon">🌟</span>
+              <div class="highlight-content">
+                <h4>Community Building</h4>
+                <p>Growing a dedicated following of animation enthusiasts and stick figure fans</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta">
+            <a href="https://www.linkedin.com/in/genekellyboyle/" target="_blank" class="btn btn-secondary">View LinkedIn Profile</a>
+            <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">Subscribe to K Animates</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
