@@ -1,0 +1,51 @@
+# Cursor AI Rules for Stickman Animation Website
+
+## Project Context
+This is a Stickman Animation Website project that will be deployed on Vercel. The project focuses on creating engaging animations and interactive content.
+
+## Code Style & Standards
+- Use modern ES6+ JavaScript/TypeScript syntax
+- Follow responsive design principles with mobile-first approach
+- Implement accessibility best practices (ARIA labels, semantic HTML)
+- Use CSS Grid and Flexbox for layouts
+- Prefer functional components over class components
+- Use meaningful variable and function names
+
+## Animation & Performance
+- Optimize animations for 60fps performance
+- Use CSS transforms and opacity for smooth animations
+- Implement lazy loading for heavy assets
+- Use requestAnimationFrame for JavaScript animations
+- Minimize DOM manipulation during animations
+
+## File Organization
+- Keep components in a `components/` directory
+- Organize styles in a `styles/` directory
+- Store utilities in a `utils/` directory
+- Use descriptive file names that reflect their purpose
+- Group related files in feature-based folders
+
+## Vercel Deployment
+- Never run build commands locally (use `git push` for Vercel builds)
+- Ensure all environment variables are set in Vercel dashboard
+- Use `.vercelignore` to exclude unnecessary files
+- Keep build scripts in package.json for Vercel CI/CD
+
+## AI Assistance Preferences
+- Provide complete, working code examples
+- Include error handling and edge cases
+- Suggest performance optimizations
+- Recommend modern web development best practices
+- Help with responsive design implementation
+
+## Testing & Quality
+- Suggest unit tests for critical functions
+- Recommend accessibility testing tools
+- Include error boundary implementations
+- Suggest performance monitoring approaches
+
+## Documentation
+- Write clear, concise comments for complex logic
+- Document component props and usage
+- Include setup instructions for new features
+- Maintain README with project overview and setup steps

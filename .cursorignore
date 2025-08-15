@@ -1,0 +1,64 @@
+# Cursor AI Ignore File - Optimizes AI performance by excluding unnecessary files
+
+# Build outputs and dependencies
+node_modules/
+.next/
+dist/
+build/
+out/
+.vercel/
+
+# Environment and config files
+.env*
+.vercelignore
+vercel.json
+vercel-*.json
+
+# Temporary and cache files
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git files
+.git/
+.gitignore
+
+# Deployment scripts and checklists (keep these for reference but exclude from AI processing)
+*-CHECKLIST.md
+*-FIX.md
+*-GUIDE.md
+*-STEPS.md
+*.bat
+*.ps1
+*.js
+
+# Keep only essential project files for AI assistance
+!package.json
+!README.md
+!src/
+!components/
+!styles/
+!utils/
