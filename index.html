@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="pages/styles.css">
+  <link rel="stylesheet" href="./pages/styles.css">
 </head>
 <body>
   <!-- Header -->
@@ -104,6 +104,32 @@
     <p>Join the adventures of Stickman, the legendary hero of Animation Island!</p>
     <p>Together we can defeat the forces of Purple and keep Animation Island safe for all! 🛡️⚔️</p>
   </footer>
+
+  <script>
+    // Debug navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Page loaded, checking navigation links...');
+      
+      // Test all navigation links
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        console.log('Navigation link:', link.href, link.textContent);
+        
+        // Add click event to test navigation
+        link.addEventListener('click', function(e) {
+          console.log('Clicked link:', this.href, this.textContent);
+        });
+      });
+      
+      // Test other links
+      const allLinks = document.querySelectorAll('a');
+      allLinks.forEach(link => {
+        if (link.href && !link.href.startsWith('http')) {
+          console.log('Internal link:', link.href, link.textContent);
+        }
+      });
+    });
+  </script>
 
   <style>
     .overview-section {
