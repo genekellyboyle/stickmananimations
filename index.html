@@ -29,392 +29,127 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="pages/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">🎬 K Animates</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/youtube.html">YouTube</a></li>
+        <li><a href="pages/animations.html">Animations</a></li>
+        <li><a href="pages/features.html">Features</a></li>
+        <li><a href="pages/about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Stickman Epic Legends</h1>
+      <div class="subtitle">The Legendary Hero of Animation Island</div>
+      <p>Join the epic adventures of Stickman as he battles the forces of Purple to save Animation Island! Experience fluid motion, awesome camera angles, and nonstop action in this tribute to classic YouTube animators.</p>
+      <div class="cta-buttons">
+        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
+        <a href="pages/animations.html" class="btn btn-primary">Try Animations</a>
+        <a href="pages/youtube.html" class="btn btn-secondary">Watch Episodes</a>
+      </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section class="overview-section">
+      <h2 class="section-title">Welcome to Animation Island</h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">🎬</div>
+          <h3>Epic Storytelling</h3>
+          <p>Join Stickman's legendary quest to save Animation Island from the forces of Purple with monthly episodes</p>
+          <a href="pages/features.html" class="btn btn-secondary">Learn More</a>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">⚡</div>
+          <h3>Fluid Animation</h3>
+          <p>Experience smooth, 60fps stick figure animations with awesome camera angles and dynamic motion</p>
+          <a href="pages/animations.html" class="btn btn-secondary">Try Now</a>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">🥊</div>
+          <h3>Epic Battles</h3>
+          <p>Witness over-the-top fight scenes with stick figure characters in intense action sequences</p>
+          <a href="pages/youtube.html" class="btn btn-secondary">Watch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <h2>Ready to Join the Adventure?</h2>
+      <p>The epic animated battles between good and evil are just beginning! Subscribe to K Animates and watch Stickman take stick figure animation to new levels.</p>
+      <div class="cta-buttons">
+        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
+        <a href="pages/about.html" class="btn btn-primary">Meet the Creator</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 <a href="https://www.youtube.com/@gkanimates" target="_blank" class="youtube-link">K Animates</a> - Stickman Epic Legends</p>
+    <p>Join the adventures of Stickman, the legendary hero of Animation Island!</p>
+    <p>Together we can defeat the forces of Purple and keep Animation Island safe for all! 🛡️⚔️</p>
+  </footer>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-      color: white;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* Header Styles */
-    .header {
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 1rem 2rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      font-family: 'Comfortaa', cursive;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #ff5500;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: #ff5500;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #ff5500;
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Main Content */
-    .main {
-      padding-top: 100px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
+    .overview-section {
       padding: 4rem 0;
-      position: relative;
     }
 
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, #ff5500, #ff8c00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .hero .subtitle {
-      font-size: 1.5rem;
-      color: #ff8c00;
-      margin-bottom: 1rem;
-      font-weight: 600;
-      animation: fadeInUp 1s ease-out 0.1s both;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      color: #cbd5e1;
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: fadeInUp 1s ease-out 0.2s both;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: fadeInUp 1s ease-out 0.4s both;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: linear-gradient(45deg, #ff5500, #ff8c00);
-      color: white;
-      box-shadow: 0 4px 15px rgba(255, 85, 0, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 85, 0, 0.4);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid #ff5500;
-    }
-
-    .btn-secondary:hover {
-      background: #ff5500;
-      transform: translateY(-2px);
-    }
-
-    .btn-youtube {
-      background: #ff0000;
-      color: white;
-      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-    }
-
-    .btn-youtube:hover {
-      background: #cc0000;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
-    }
-
-    /* YouTube Channel Section */
-    .youtube-section {
-      padding: 4rem 0;
-      text-align: center;
-      background: rgba(15, 23, 42, 0.5);
-      border-radius: 20px;
-      margin: 2rem 0;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: white;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(45deg, #ff5500, #ff8c00);
-      border-radius: 2px;
-    }
-
-    .youtube-embed {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .youtube-embed iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-    }
-
-    .channel-info {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .channel-info h3 {
-      color: #ff5500;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .channel-info p {
-      color: #cbd5e1;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .channel-stats {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(255, 85, 0, 0.1);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 85, 0, 0.3);
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #ff5500;
-    }
-
-    .stat-label {
-      color: #cbd5e1;
-      font-size: 0.9rem;
-    }
-
-    /* Animation Section */
-    .animation-section {
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .canvas-container {
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 20px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    #animationCanvas {
-      border: 2px solid #ff5500;
-      border-radius: 15px;
-      background: #0f172a;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .controls {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .control-btn {
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 25px;
-      background: #334155;
-      color: white;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .control-btn:hover {
-      background: #ff5500;
-      transform: translateY(-2px);
-    }
-
-    .control-btn.active {
-      background: #ff5500;
-    }
-
-    /* Animation Presets */
-    .animation-presets {
+    .overview-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       margin-top: 3rem;
     }
 
-    .preset-card {
+    .overview-card {
       background: rgba(15, 23, 42, 0.8);
       border-radius: 15px;
-      padding: 1.5rem;
+      padding: 2rem;
+      text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
-      cursor: pointer;
     }
 
-    .preset-card:hover {
+    .overview-card:hover {
       transform: translateY(-5px);
       border-color: #ff5500;
       box-shadow: 0 10px 25px rgba(255, 85, 0, 0.2);
     }
 
-    .preset-card h3 {
-      color: #ff5500;
-      margin-bottom: 1rem;
-    }
-
-    .preset-card p {
-      color: #cbd5e1;
-      font-size: 0.9rem;
-    }
-
-    /* Features Section */
-    .features {
-      padding: 4rem 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .feature-card {
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 15px;
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      border-color: #ff5500;
-    }
-
-    .feature-icon {
+    .overview-icon {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: #ff5500;
     }
 
-    .feature-card h3 {
+    .overview-card h3 {
       margin-bottom: 1rem;
       color: white;
+      font-size: 1.5rem;
     }
 
-    .feature-card p {
+    .overview-card p {
       color: #cbd5e1;
       line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
 
-    /* Call to Action Section */
     .cta-section {
       padding: 4rem 0;
       text-align: center;
@@ -437,718 +172,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
-    /* About Me Section */
-    .about-section {
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .about-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .about-text h3 {
-      font-size: 2.5rem;
-      color: #ff5500;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
-
-    .about-subtitle {
-      font-size: 1.3rem;
-      color: #ff8c00;
-      margin-bottom: 2rem;
-      font-weight: 600;
-    }
-
-    .about-description {
-      text-align: left;
-      margin-bottom: 3rem;
-    }
-
-    .about-description p {
-      color: #cbd5e1;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    .about-highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .highlight-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      text-align: left;
-      padding: 1.5rem;
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .highlight-item:hover {
-      transform: translateY(-5px);
-      border-color: #ff5500;
-      box-shadow: 0 10px 25px rgba(255, 85, 0, 0.2);
-    }
-
-    .highlight-icon {
-      font-size: 2rem;
-      color: #ff5500;
-      flex-shrink: 0;
-    }
-
-    .highlight-content h4 {
-      color: white;
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    .highlight-content p {
-      color: #cbd5e1;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .about-cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    /* Footer */
-    .footer {
-      background: rgba(15, 23, 42, 0.95);
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .footer p {
-      color: #cbd5e1;
-      margin-bottom: 1rem;
-    }
-
-    .footer .youtube-link {
-      color: #ff5500;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .footer .youtube-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .nav-links {
-        display: none;
-      }
-      
-      .main {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .controls {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .youtube-embed iframe {
-        height: 250px;
-      }
-    }
   </style>
-</head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <nav class="nav">
-      <a href="#" class="logo">🎬 K Animates</a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#youtube">YouTube</a></li>
-        <li><a href="#animations">Animations</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About Me</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main class="main">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <h1>Stickman Epic Legends</h1>
-      <div class="subtitle">The Legendary Hero of Animation Island</div>
-      <p>Join the epic adventures of Stickman as he battles the forces of Purple to save Animation Island! Experience fluid motion, awesome camera angles, and nonstop action in this tribute to classic YouTube animators.</p>
-      <div class="cta-buttons">
-        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
-        <a href="#animations" class="btn btn-primary">Try Animations</a>
-        <a href="#youtube" class="btn btn-secondary">Watch Episodes</a>
-      </div>
-    </section>
-
-    <!-- YouTube Channel Section -->
-    <section id="youtube" class="youtube-section">
-      <h2 class="section-title">Latest Episode</h2>
-      
-      <div class="youtube-embed">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Stickman Epic Legends - Latest Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-
-      <div class="channel-info">
-        <h3>🎬 K Animates - Stickman Epic Legends</h3>
-        <p>Join the adventures of Stickman, the legendary hero of Animation Island! This YouTube channel brings you an animated series about Stickman saving Animation Island from Purple!</p>
-        <p>Stickman Epic Legends is animated over-the-top with Fight scenes and Funny moments. Stickman's fluid motion and awesome camera angles pay tribute to classic YouTube animators.</p>
-        <p>If you love stick figure animation, Comedy, dynamic action, and nonstop adventure, then smash that subscribe button! Join Stickman and his friends in saving Animation Island from destruction with new animated episodes release monthly!</p>
-      </div>
-
-      <div class="channel-stats">
-        <div class="stat-item">
-          <div class="stat-number">Monthly</div>
-          <div class="stat-label">New Episodes</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">Epic</div>
-          <div class="stat-label">Battles</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">Fluid</div>
-          <div class="stat-label">Animation</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">Action</div>
-          <div class="stat-label">Packed</div>
-        </div>
-      </div>
-
-      <div class="cta-buttons">
-        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe Now</a>
-        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-secondary">Visit Channel</a>
-      </div>
-    </section>
-
-    <!-- Animation Section -->
-    <section id="animations" class="animation-section">
-      <h2 class="section-title">Interactive Animation Studio</h2>
-      
-      <div class="canvas-container">
-        <canvas id="animationCanvas" width="800" height="400"></canvas>
-        
-        <div class="controls">
-          <button class="control-btn active" onclick="setAnimation('idle')">Idle</button>
-          <button class="control-btn" onclick="setAnimation('walk')">Walk</button>
-          <button class="control-btn" onclick="setAnimation('run')">Run</button>
-          <button class="control-btn" onclick="setAnimation('jump')">Jump</button>
-          <button class="control-btn" onclick="setAnimation('dance')">Dance</button>
-        </div>
-      </div>
-
-      <div class="animation-presets">
-        <div class="preset-card" onclick="setAnimation('idle')">
-          <h3>🕴️ Idle Animation</h3>
-          <p>Gentle breathing and subtle movements for a relaxed stickman</p>
-        </div>
-        <div class="preset-card" onclick="setAnimation('walk')">
-          <h3>🚶 Walking</h3>
-          <p>Smooth walking animation with natural arm and leg movement</p>
-        </div>
-        <div class="preset-card" onclick="setAnimation('run')">
-          <h3>🏃 Running</h3>
-          <p>Fast-paced running with dynamic motion and energy</p>
-        </div>
-        <div class="preset-card" onclick="setAnimation('jump')">
-          <h3>🦘 Jumping</h3>
-          <p>Bouncy jumping animation with gravity effects</p>
-        </div>
-        <div class="preset-card" onclick="setAnimation('dance')">
-          <h3>💃 Dancing</h3>
-          <p>Fun dance moves with rhythm and style</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-      <div class="feature-card">
-        <div class="feature-icon">🎬</div>
-        <h3>Epic Storytelling</h3>
-        <p>Join Stickman's legendary quest to save Animation Island from the forces of Purple with monthly episodes</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Fluid Animation</h3>
-        <p>Experience smooth, 60fps stick figure animations with awesome camera angles and dynamic motion</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🥊</div>
-        <h3>Epic Battles</h3>
-        <p>Witness over-the-top fight scenes with stick figure characters in intense action sequences</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">😄</div>
-        <h3>Comedy & Fun</h3>
-        <p>Enjoy hilarious moments and funny interactions between characters throughout the adventure</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎭</div>
-        <h3>Classic Tribute</h3>
-        <p>Pay homage to classic YouTube animators with authentic stick figure animation style</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🚀</div>
-        <h3>Monthly Episodes</h3>
-        <p>New animated adventures released monthly to keep the epic story continuing</p>
-      </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-      <h2>Ready to Join the Adventure?</h2>
-      <p>The epic animated battles between good and evil are just beginning! Subscribe to K Animates and watch Stickman take stick figure animation to new levels.</p>
-      <div class="cta-buttons">
-        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
-        <a href="#animations" class="btn btn-primary">Try Interactive Animations</a>
-      </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-      <h2 class="section-title">About the Creator</h2>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <h3>🎬 Gene Kelly Boyle</h3>
-          <p class="about-subtitle">Creator of K Animates & Stickman Epic Legends</p>
-          
-          <div class="about-description">
-            <p>I'm a passionate animator and storyteller dedicated to bringing the epic adventures of Stickman to life on Animation Island. With a background in creative animation and digital storytelling, I create engaging stick figure animations that pay tribute to classic YouTube animators while pushing the boundaries of what's possible in the medium.</p>
-            
-            <p>My work focuses on fluid motion, dynamic camera angles, and over-the-top action sequences that capture the imagination of viewers worldwide. Through Stickman Epic Legends, I'm building a universe where good battles evil in epic animated showdowns, all while maintaining the authentic stick figure animation style that fans love.</p>
-            
-            <p>When I'm not animating epic battles between Stickman and the forces of Purple, I'm constantly exploring new techniques to enhance the visual storytelling and create more immersive experiences for our growing community of animation enthusiasts.</p>
-          </div>
-
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🎭</span>
-              <div class="highlight-content">
-                <h4>Creative Animation</h4>
-                <p>Specializing in stick figure animation with fluid motion and dynamic storytelling</p>
-              </div>
-            </div>
-            
-            <div class="highlight-item">
-              <span class="highlight-icon">📖</span>
-              <div class="highlight-content">
-                <h4>Epic Storytelling</h4>
-                <p>Creating compelling narratives that keep viewers engaged month after month</p>
-              </div>
-            </div>
-            
-            <div class="highlight-item">
-              <span class="highlight-icon">🚀</span>
-              <div class="highlight-content">
-                <h4>Content Creation</h4>
-                <p>Consistently delivering high-quality animated content on a monthly schedule</p>
-              </div>
-            </div>
-            
-            <div class="highlight-item">
-              <span class="highlight-icon">🌟</span>
-              <div class="highlight-content">
-                <h4>Community Building</h4>
-                <p>Growing a dedicated following of animation enthusiasts and stick figure fans</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-cta">
-            <a href="https://www.linkedin.com/in/genekellyboyle/" target="_blank" class="btn btn-secondary">View LinkedIn Profile</a>
-            <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">Subscribe to K Animates</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 <a href="https://www.youtube.com/@gkanimates" target="_blank" class="youtube-link">K Animates</a> - Stickman Epic Legends</p>
-    <p>Join the adventures of Stickman, the legendary hero of Animation Island!</p>
-    <p>Together we can defeat the forces of Purple and keep Animation Island safe for all! 🛡️⚔️</p>
-  </footer>
-
-  <script>
-    // Animation System
-    class StickmanAnimation {
-      constructor(canvas) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.width = canvas.width;
-        this.height = canvas.height;
-        
-        this.stickman = {
-          x: this.width / 2,
-          y: this.height / 2,
-          headRadius: 20,
-          bodyLength: 60,
-          armLength: 40,
-          legLength: 50,
-          color: '#ff5500'
-        };
-        
-        this.animation = 'idle';
-        this.frame = 0;
-        this.isAnimating = false;
-        
-        this.init();
-      }
-      
-      init() {
-        this.startAnimation();
-      }
-      
-      startAnimation() {
-        this.isAnimating = true;
-        this.animate();
-      }
-      
-      animate() {
-        if (!this.isAnimating) return;
-        
-        this.frame++;
-        this.draw();
-        requestAnimationFrame(() => this.animate());
-      }
-      
-      draw() {
-        // Clear canvas
-        this.ctx.fillStyle = '#0f172a';
-        this.ctx.fillRect(0, 0, this.width, this.height);
-        
-        // Draw stickman based on current animation
-        switch (this.animation) {
-          case 'idle':
-            this.drawIdle();
-            break;
-          case 'walk':
-            this.drawWalk();
-            break;
-          case 'run':
-            this.drawRun();
-            break;
-          case 'jump':
-            this.drawJump();
-            break;
-          case 'dance':
-            this.drawDance();
-            break;
-        }
-      }
-      
-      drawIdle() {
-        const time = this.frame * 0.05;
-        const breathing = Math.sin(time) * 2;
-        
-        // Head
-        this.ctx.fillStyle = this.stickman.color;
-        this.ctx.beginPath();
-        this.ctx.arc(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius + breathing, this.stickman.headRadius, 0, Math.PI * 2);
-        this.ctx.fill();
-        
-        // Body
-        this.ctx.strokeStyle = this.stickman.color;
-        this.ctx.lineWidth = 3;
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 + breathing);
-        this.ctx.lineTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + breathing);
-        this.ctx.stroke();
-        
-        // Arms
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x - 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + breathing);
-        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength, this.stickman.y - this.stickman.bodyLength/2 + 40 + breathing);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + breathing);
-        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength, this.stickman.y - this.stickman.bodyLength/2 + 40 + breathing);
-        this.ctx.stroke();
-        
-        // Legs
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + breathing);
-        this.ctx.lineTo(this.stickman.x - 15, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + breathing);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + breathing);
-        this.ctx.lineTo(this.stickman.x + 15, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + breathing);
-        this.ctx.stroke();
-      }
-      
-      drawWalk() {
-        const time = this.frame * 0.1;
-        const step = Math.sin(time) * 20;
-        const armSwing = Math.sin(time) * 15;
-        
-        // Head
-        this.ctx.fillStyle = this.stickman.color;
-        this.ctx.beginPath();
-        this.ctx.arc(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius, this.stickman.headRadius, 0, Math.PI * 2);
-        this.ctx.fill();
-        
-        // Body
-        this.ctx.strokeStyle = this.stickman.color;
-        this.ctx.lineWidth = 3;
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2);
-        this.ctx.lineTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2);
-        this.ctx.stroke();
-        
-        // Arms
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x - 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20);
-        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength + step + armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20);
-        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength + step - armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40);
-        this.ctx.stroke();
-        
-        // Legs
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2);
-        this.ctx.lineTo(this.stickman.x - 15 + step + step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2);
-        this.ctx.lineTo(this.stickman.x + 15 + step - step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength);
-        this.ctx.stroke();
-      }
-      
-      drawRun() {
-        const time = this.frame * 0.15;
-        const step = Math.sin(time) * 30;
-        const armSwing = Math.sin(time) * 25;
-        const bounce = Math.abs(Math.sin(time)) * 10;
-        
-        // Head
-        this.ctx.fillStyle = this.stickman.color;
-        this.ctx.beginPath();
-        this.ctx.arc(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius - bounce, this.stickman.headRadius, 0, Math.PI * 2);
-        this.ctx.fill();
-        
-        // Body
-        this.ctx.strokeStyle = this.stickman.color;
-        this.ctx.lineWidth = 3;
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2 - bounce);
-        this.ctx.lineTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2 - bounce);
-        this.ctx.stroke();
-        
-        // Arms
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x - 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20 - bounce);
-        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength + step + armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40 - bounce);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20 - bounce);
-        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength + step - armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40 - bounce);
-        this.ctx.stroke();
-        
-        // Legs
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2 - bounce);
-        this.ctx.lineTo(this.stickman.x - 15 + step + step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength - bounce);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2 - bounce);
-        this.ctx.lineTo(this.stickman.x + 15 + step - step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength - bounce);
-        this.ctx.stroke();
-      }
-      
-      drawJump() {
-        const time = this.frame * 0.08;
-        const jumpHeight = Math.sin(time) * 80;
-        const rotation = Math.sin(time) * 0.3;
-        
-        this.ctx.save();
-        this.ctx.translate(this.stickman.x, this.stickman.y);
-        this.ctx.rotate(rotation);
-        
-        // Head
-        this.ctx.fillStyle = this.stickman.color;
-        this.ctx.beginPath();
-        this.ctx.arc(0, -this.stickman.bodyLength/2 - this.stickman.headRadius - jumpHeight, this.stickman.headRadius, 0, Math.PI * 2);
-        this.ctx.fill();
-        
-        // Body
-        this.ctx.strokeStyle = this.stickman.color;
-        this.ctx.lineWidth = 3;
-        this.ctx.beginPath();
-        this.ctx.moveTo(0, -this.stickman.bodyLength/2 - jumpHeight);
-        this.ctx.lineTo(0, this.stickman.bodyLength/2 - jumpHeight);
-        this.ctx.stroke();
-        
-        // Arms
-        this.ctx.beginPath();
-        this.ctx.moveTo(-15, -this.stickman.bodyLength/2 + 20 - jumpHeight);
-        this.ctx.lineTo(-15 - this.stickman.armLength, -this.stickman.bodyLength/2 + 40 - jumpHeight);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(15, -this.stickman.bodyLength/2 + 20 - jumpHeight);
-        this.ctx.lineTo(15 + this.stickman.armLength, -this.stickman.bodyLength/2 + 40 - jumpHeight);
-        this.ctx.stroke();
-        
-        // Legs
-        this.ctx.beginPath();
-        this.ctx.moveTo(0, this.stickman.bodyLength/2 - jumpHeight);
-        this.ctx.lineTo(-15, this.stickman.bodyLength/2 + this.stickman.legLength - jumpHeight);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(0, this.stickman.bodyLength/2 - jumpHeight);
-        this.ctx.lineTo(15, this.stickman.bodyLength/2 + this.stickman.legLength - jumpHeight);
-        this.ctx.stroke();
-        
-        this.ctx.restore();
-      }
-      
-      drawDance() {
-        const time = this.frame * 0.12;
-        const bounce = Math.sin(time) * 15;
-        const armWave = Math.sin(time * 2) * 30;
-        const legKick = Math.sin(time) * 20;
-        
-        // Head
-        this.ctx.fillStyle = this.stickman.color;
-        this.ctx.beginPath();
-        this.ctx.arc(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius + bounce, this.stickman.headRadius, 0, Math.PI * 2);
-        this.ctx.fill();
-        
-        // Body
-        this.ctx.strokeStyle = this.stickman.color;
-        this.ctx.lineWidth = 3;
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 + bounce);
-        this.ctx.lineTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + bounce);
-        this.ctx.stroke();
-        
-        // Arms
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x - 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + bounce);
-        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength + armWave, this.stickman.y - this.stickman.bodyLength/2 + 40 + bounce);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x + 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + bounce);
-        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength - armWave, this.stickman.y - this.stickman.bodyLength/2 + 40 + bounce);
-        this.ctx.stroke();
-        
-        // Legs
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + bounce);
-        this.ctx.lineTo(this.stickman.x - 15 + legKick, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + bounce);
-        this.ctx.stroke();
-        
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + bounce);
-        this.ctx.lineTo(this.stickman.x + 15 - legKick, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + bounce);
-        this.ctx.stroke();
-      }
-      
-      setAnimation(type) {
-        this.animation = type;
-        this.frame = 0;
-      }
-    }
-
-    // Initialize animation when page loads
-    let stickmanAnim;
-    
-    function startAnimation() {
-      const canvas = document.getElementById('animationCanvas');
-      stickmanAnim = new StickmanAnimation(canvas);
-      
-      // Scroll to animation section
-      document.getElementById('animations').scrollIntoView({ behavior: 'smooth' });
-    }
-    
-    function setAnimation(type) {
-      if (stickmanAnim) {
-        stickmanAnim.setAnimation(type);
-        
-        // Update active button
-        document.querySelectorAll('.control-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
-      }
-    }
-    
-    // Auto-start animation when page loads
-    window.addEventListener('load', () => {
-      setTimeout(startAnimation, 1000);
-    });
-    
-    // Smooth scrolling for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
 </body>
 </html>
