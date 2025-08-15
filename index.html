@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GK Animates - Stickman Epic Legends | Animation Island Adventures</title>
-  <meta name="description" content="Join Stickman's epic adventures on Animation Island! Watch the legendary hero battle Purple and save Animation Island with fluid motion, awesome camera angles, and nonstop action. Subscribe to K Animates for monthly episodes!">
+  <meta name="description" content="Join Stickman's epic adventures on Animation Island! Watch the legendary hero battle Purple and save Animation Island with fluid motion, awesome camera angles, and nonstop action. Subscribe to GK Animates for monthly episodes!">
   
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:title" content="GK Animates - Stickman Epic Legends | Animation Island Adventures" />
@@ -118,6 +118,24 @@
         // Add click event to test navigation
         link.addEventListener('click', function(e) {
           console.log('Clicked link:', this.href, this.textContent);
+          
+          // Test if the link actually works
+          if (this.href && !this.href.startsWith('http')) {
+            console.log('Attempting to navigate to:', this.href);
+            // Try to fetch the page to see if it exists
+            fetch(this.href)
+              .then(response => {
+                if (response.ok) {
+                  console.log('Page exists, navigating...');
+                  window.location.href = this.href;
+                } else {
+                  console.error('Page not found:', this.href);
+                }
+              })
+              .catch(error => {
+                console.error('Error navigating to:', this.href, error);
+              });
+          }
         });
       });
       
@@ -128,6 +146,17 @@
           console.log('Internal link:', link.href, link.textContent);
         }
       });
+      
+      // Check if CSS is loaded
+      const stylesheets = document.styleSheets;
+      console.log('Loaded stylesheets:', stylesheets.length);
+      for (let i = 0; i < stylesheets.length; i++) {
+        try {
+          console.log('Stylesheet', i, ':', stylesheets[i].href);
+        } catch (e) {
+          console.log('Stylesheet', i, ': (cross-origin)');
+        }
+      }
     });
   </script>
 
