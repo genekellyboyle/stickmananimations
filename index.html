@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stickman Animation Studio | Interactive Animations</title>
-  <meta name="description" content="Create and watch amazing stickman animations with our interactive animation studio. Features walking, running, jumping, and custom animations.">
+  <title>K Animates - Stickman Epic Legends | Animation Island Adventures</title>
+  <meta name="description" content="Join Stickman's epic adventures on Animation Island! Watch the legendary hero battle Purple and save Animation Island with fluid motion, awesome camera angles, and nonstop action. Subscribe to K Animates for monthly episodes!">
+  
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="K Animates - Stickman Epic Legends | Animation Island Adventures" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stickmananimations.vercel.app" />
+  <meta property="og:image" content="https://stickmananimations.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Stickman Epic Legends - The legendary hero of Animation Island battling evil forces with epic stick figure animation" />
+  <meta property="og:description" content="Join the adventures of Stickman, the legendary hero of Animation Island! Epic animated battles between good and evil with fluid motion and awesome camera angles." />
+  <meta property="og:site_name" content="K Animates" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="K Animates - Stickman Epic Legends" />
+  <meta name="twitter:description" content="Join Stickman's epic adventures on Animation Island! Epic battles, fluid animation, and nonstop adventure." />
+  <meta name="twitter:image" content="https://stickmananimations.vercel.app/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Stickman Epic Legends - Animation Island Adventures" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,11 +133,19 @@
       animation: fadeInUp 1s ease-out;
     }
 
+    .hero .subtitle {
+      font-size: 1.5rem;
+      color: #ff8c00;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease-out 0.1s both;
+    }
+
     .hero p {
       font-size: 1.3rem;
       color: #cbd5e1;
       margin-bottom: 2rem;
-      max-width: 600px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
       animation: fadeInUp 1s ease-out 0.2s both;
@@ -166,10 +193,25 @@
       transform: translateY(-2px);
     }
 
-    /* Animation Canvas Section */
-    .animation-section {
+    .btn-youtube {
+      background: #ff0000;
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .btn-youtube:hover {
+      background: #cc0000;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+    }
+
+    /* YouTube Channel Section */
+    .youtube-section {
       padding: 4rem 0;
       text-align: center;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 20px;
+      margin: 2rem 0;
     }
 
     .section-title {
@@ -189,6 +231,71 @@
       height: 4px;
       background: linear-gradient(45deg, #ff5500, #ff8c00);
       border-radius: 2px;
+    }
+
+    .youtube-embed {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .youtube-embed iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    .channel-info {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .channel-info h3 {
+      color: #ff5500;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .channel-info p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .channel-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(255, 85, 0, 0.1);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 85, 0, 0.3);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ff5500;
+    }
+
+    .stat-label {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+
+    /* Animation Section */
+    .animation-section {
+      padding: 4rem 0;
+      text-align: center;
     }
 
     .canvas-container {
@@ -307,6 +414,30 @@
       line-height: 1.6;
     }
 
+    /* Call to Action Section */
+    .cta-section {
+      padding: 4rem 0;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(255, 85, 0, 0.1), rgba(255, 140, 0, 0.1));
+      border-radius: 20px;
+      margin: 2rem 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     /* Footer */
     .footer {
       background: rgba(15, 23, 42, 0.95);
@@ -318,6 +449,17 @@
 
     .footer p {
       color: #cbd5e1;
+      margin-bottom: 1rem;
+    }
+
+    .footer .youtube-link {
+      color: #ff5500;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer .youtube-link:hover {
+      text-decoration: underline;
     }
 
     /* Animations */
@@ -365,32 +507,10 @@
         flex-direction: column;
         align-items: center;
       }
-    }
-
-    /* Loading Animation */
-    .loading {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .loading.show {
-      display: block;
-    }
-
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 3px solid #334155;
-      border-top: 3px solid #ff5500;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin: 0 auto 1rem;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      
+      .youtube-embed iframe {
+        height: 250px;
+      }
     }
   </style>
 </head>
@@ -398,11 +518,11 @@
   <!-- Header -->
   <header class="header">
     <nav class="nav">
-      <a href="#" class="logo">🎬 Stickman Studio</a>
+      <a href="#" class="logo">🎬 K Animates</a>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
+        <li><a href="#youtube">YouTube</a></li>
         <li><a href="#animations">Animations</a></li>
-        <li><a href="#features">Features</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </nav>
@@ -412,17 +532,59 @@
   <main class="main">
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1>Create Amazing Stickman Animations</h1>
-      <p>Welcome to the ultimate stickman animation studio! Create, customize, and watch your stickman characters come to life with smooth, interactive animations.</p>
+      <h1>Stickman Epic Legends</h1>
+      <div class="subtitle">The Legendary Hero of Animation Island</div>
+      <p>Join the epic adventures of Stickman as he battles the forces of Purple to save Animation Island! Experience fluid motion, awesome camera angles, and nonstop action in this tribute to classic YouTube animators.</p>
       <div class="cta-buttons">
-        <button class="btn btn-primary" onclick="startAnimation()">Start Animating</button>
-        <a href="#animations" class="btn btn-secondary">View Examples</a>
+        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
+        <a href="#animations" class="btn btn-primary">Try Animations</a>
+        <a href="#youtube" class="btn btn-secondary">Watch Episodes</a>
+      </div>
+    </section>
+
+    <!-- YouTube Channel Section -->
+    <section id="youtube" class="youtube-section">
+      <h2 class="section-title">Latest Episode</h2>
+      
+      <div class="youtube-embed">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Stickman Epic Legends - Latest Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="channel-info">
+        <h3>🎬 K Animates - Stickman Epic Legends</h3>
+        <p>Join the adventures of Stickman, the legendary hero of Animation Island! This YouTube channel brings you an animated series about Stickman saving Animation Island from Purple!</p>
+        <p>Stickman Epic Legends is animated over-the-top with Fight scenes and Funny moments. Stickman's fluid motion and awesome camera angles pay tribute to classic YouTube animators.</p>
+        <p>If you love stick figure animation, Comedy, dynamic action, and nonstop adventure, then smash that subscribe button! Join Stickman and his friends in saving Animation Island from destruction with new animated episodes release monthly!</p>
+      </div>
+
+      <div class="channel-stats">
+        <div class="stat-item">
+          <div class="stat-number">Monthly</div>
+          <div class="stat-label">New Episodes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Epic</div>
+          <div class="stat-label">Battles</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Fluid</div>
+          <div class="stat-label">Animation</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Action</div>
+          <div class="stat-label">Packed</div>
+        </div>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe Now</a>
+        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-secondary">Visit Channel</a>
       </div>
     </section>
 
     <!-- Animation Section -->
     <section id="animations" class="animation-section">
-      <h2 class="section-title">Animation Studio</h2>
+      <h2 class="section-title">Interactive Animation Studio</h2>
       
       <div class="canvas-container">
         <canvas id="animationCanvas" width="800" height="400"></canvas>
@@ -461,49 +623,55 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="about" class="features">
       <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <h3>Customizable Characters</h3>
-        <p>Create unique stickman characters with different colors, sizes, and personalities</p>
+        <div class="feature-icon">🎬</div>
+        <h3>Epic Storytelling</h3>
+        <p>Join Stickman's legendary quest to save Animation Island from the forces of Purple with monthly episodes</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h3>Smooth Performance</h3>
-        <p>Optimized animations running at 60fps for buttery smooth motion</p>
+        <h3>Fluid Animation</h3>
+        <p>Experience smooth, 60fps stick figure animations with awesome camera angles and dynamic motion</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Mobile Friendly</h3>
-        <p>Responsive design that works perfectly on all devices</p>
+        <div class="feature-icon">🥊</div>
+        <h3>Epic Battles</h3>
+        <p>Witness over-the-top fight scenes with stick figure characters in intense action sequences</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">😄</div>
+        <h3>Comedy & Fun</h3>
+        <p>Enjoy hilarious moments and funny interactions between characters throughout the adventure</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎭</div>
-        <h3>Multiple Animations</h3>
-        <p>Choose from various animation presets or create your own</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔧</div>
-        <h3>Easy Controls</h3>
-        <p>Simple interface for controlling and customizing animations</p>
+        <h3>Classic Tribute</h3>
+        <p>Pay homage to classic YouTube animators with authentic stick figure animation style</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🚀</div>
-        <h3>Instant Play</h3>
-        <p>No downloads required - animations run directly in your browser</p>
+        <h3>Monthly Episodes</h3>
+        <p>New animated adventures released monthly to keep the epic story continuing</p>
       </div>
     </section>
 
-    <!-- Loading Section -->
-    <div id="loading" class="loading">
-      <div class="spinner"></div>
-      <p>Loading animation...</p>
-    </div>
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <h2>Ready to Join the Adventure?</h2>
+      <p>The epic animated battles between good and evil are just beginning! Subscribe to K Animates and watch Stickman take stick figure animation to new levels.</p>
+      <div class="cta-buttons">
+        <a href="https://www.youtube.com/@gkanimates" target="_blank" class="btn btn-youtube">🔔 Subscribe to K Animates</a>
+        <a href="#animations" class="btn btn-primary">Try Interactive Animations</a>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Stickman Animation Studio. Created with ❤️ and lots of imagination!</p>
+    <p>&copy; 2025 <a href="https://www.youtube.com/@gkanimates" target="_blank" class="youtube-link">K Animates</a> - Stickman Epic Legends</p>
+    <p>Join the adventures of Stickman, the legendary hero of Animation Island!</p>
+    <p>Together we can defeat the forces of Purple and keep Animation Island safe for all! 🛡️⚔️</p>
   </footer>
 
   <script>
@@ -803,9 +971,6 @@
     function startAnimation() {
       const canvas = document.getElementById('animationCanvas');
       stickmanAnim = new StickmanAnimation(canvas);
-      
-      // Hide loading
-      document.getElementById('loading').classList.remove('show');
       
       // Scroll to animation section
       document.getElementById('animations').scrollIntoView({ behavior: 'smooth' });
