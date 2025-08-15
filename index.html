@@ -3,114 +3,839 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Redirect to the built application path -->
-  <meta http-equiv="refresh" content="0;url=dist/public/index.html">
-  
-  <title>GK Animates by Gene Kelly Boyle | Animation Portfolio</title>
-  <meta name="description" content="Professional animation portfolio showcasing the work of Gene Kelly Boyle, animator and storyteller. Explore character animations, motion graphics, and short films.">
+  <title>Stickman Animation Studio | Interactive Animations</title>
+  <meta name="description" content="Create and watch amazing stickman animations with our interactive animation studio. Features walking, running, jumping, and custom animations.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
   <style>
-    body {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #0f172a;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
       color: white;
-      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    .container {
-      max-width: 800px;
-      padding: 2rem;
+
+    /* Header Styles */
+    .header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
       font-family: 'Comfortaa', cursive;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff5500;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
       color: #ff5500;
     }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-    .loading {
-      display: inline-block;
-      position: relative;
-      width: 80px;
-      height: 80px;
-      margin: 2rem auto;
-    }
-    .loading div {
-      display: inline-block;
+
+    .nav-links a::after {
+      content: '';
       position: absolute;
-      left: 8px;
-      width: 16px;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
       background: #ff5500;
-      animation: loading 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+      transition: width 0.3s ease;
     }
-    .loading div:nth-child(1) {
-      left: 8px;
-      animation-delay: -0.24s;
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
-    .loading div:nth-child(2) {
-      left: 32px;
-      animation-delay: -0.12s;
+
+    /* Main Content */
+    .main {
+      padding-top: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
-    .loading div:nth-child(3) {
-      left: 56px;
-      animation-delay: 0;
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+      position: relative;
     }
-    @keyframes loading {
-      0% {
-        top: 8px;
-        height: 64px;
-      }
-      50%, 100% {
-        top: 24px;
-        height: 32px;
-      }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #ff5500, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInUp 1s ease-out;
     }
-    .manual-btn {
-      background-color: #ff5500;
-      color: white;
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
       border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 0.375rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
       text-decoration: none;
       display: inline-block;
-      margin-top: 1rem;
     }
-    .manual-btn:hover {
-      background-color: #ff7730;
+
+    .btn-primary {
+      background: linear-gradient(45deg, #ff5500, #ff8c00);
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 85, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 85, 0, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid #ff5500;
+    }
+
+    .btn-secondary:hover {
+      background: #ff5500;
+      transform: translateY(-2px);
+    }
+
+    /* Animation Canvas Section */
+    .animation-section {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: white;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(45deg, #ff5500, #ff8c00);
+      border-radius: 2px;
+    }
+
+    .canvas-container {
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    #animationCanvas {
+      border: 2px solid #ff5500;
+      border-radius: 15px;
+      background: #0f172a;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .control-btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      background: #334155;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .control-btn:hover {
+      background: #ff5500;
+      transform: translateY(-2px);
+    }
+
+    .control-btn.active {
+      background: #ff5500;
+    }
+
+    /* Animation Presets */
+    .animation-presets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .preset-card {
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 15px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .preset-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff5500;
+      box-shadow: 0 10px 25px rgba(255, 85, 0, 0.2);
+    }
+
+    .preset-card h3 {
+      color: #ff5500;
+      margin-bottom: 1rem;
+    }
+
+    .preset-card p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 4rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff5500;
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ff5500;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .feature-card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer p {
+      color: #cbd5e1;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Loading Animation */
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .loading.show {
+      display: block;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #334155;
+      border-top: 3px solid #ff5500;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>GK Animates</h1>
-    <div class="loading"><div></div><div></div><div></div></div>
-    <p>Loading the animation portfolio...</p>
-    <p>You will be redirected automatically in a moment.</p>
-    <a href="dist/public/index.html" class="manual-btn">Go to Animation Portfolio</a>
-  </div>
-  
-  <!-- JavaScript redirect as fallback -->
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">🎬 Stickman Studio</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#animations">Animations</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Create Amazing Stickman Animations</h1>
+      <p>Welcome to the ultimate stickman animation studio! Create, customize, and watch your stickman characters come to life with smooth, interactive animations.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary" onclick="startAnimation()">Start Animating</button>
+        <a href="#animations" class="btn btn-secondary">View Examples</a>
+      </div>
+    </section>
+
+    <!-- Animation Section -->
+    <section id="animations" class="animation-section">
+      <h2 class="section-title">Animation Studio</h2>
+      
+      <div class="canvas-container">
+        <canvas id="animationCanvas" width="800" height="400"></canvas>
+        
+        <div class="controls">
+          <button class="control-btn active" onclick="setAnimation('idle')">Idle</button>
+          <button class="control-btn" onclick="setAnimation('walk')">Walk</button>
+          <button class="control-btn" onclick="setAnimation('run')">Run</button>
+          <button class="control-btn" onclick="setAnimation('jump')">Jump</button>
+          <button class="control-btn" onclick="setAnimation('dance')">Dance</button>
+        </div>
+      </div>
+
+      <div class="animation-presets">
+        <div class="preset-card" onclick="setAnimation('idle')">
+          <h3>🕴️ Idle Animation</h3>
+          <p>Gentle breathing and subtle movements for a relaxed stickman</p>
+        </div>
+        <div class="preset-card" onclick="setAnimation('walk')">
+          <h3>🚶 Walking</h3>
+          <p>Smooth walking animation with natural arm and leg movement</p>
+        </div>
+        <div class="preset-card" onclick="setAnimation('run')">
+          <h3>🏃 Running</h3>
+          <p>Fast-paced running with dynamic motion and energy</p>
+        </div>
+        <div class="preset-card" onclick="setAnimation('jump')">
+          <h3>🦘 Jumping</h3>
+          <p>Bouncy jumping animation with gravity effects</p>
+        </div>
+        <div class="preset-card" onclick="setAnimation('dance')">
+          <h3>💃 Dancing</h3>
+          <p>Fun dance moves with rhythm and style</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Customizable Characters</h3>
+        <p>Create unique stickman characters with different colors, sizes, and personalities</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Smooth Performance</h3>
+        <p>Optimized animations running at 60fps for buttery smooth motion</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Responsive design that works perfectly on all devices</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎭</div>
+        <h3>Multiple Animations</h3>
+        <p>Choose from various animation presets or create your own</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Easy Controls</h3>
+        <p>Simple interface for controlling and customizing animations</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Instant Play</h3>
+        <p>No downloads required - animations run directly in your browser</p>
+      </div>
+    </section>
+
+    <!-- Loading Section -->
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading animation...</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Stickman Animation Studio. Created with ❤️ and lots of imagination!</p>
+  </footer>
+
   <script>
-    // Redirect to the built application
-    window.location.href = 'dist/public/index.html';
+    // Animation System
+    class StickmanAnimation {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.width = canvas.width;
+        this.height = canvas.height;
+        
+        this.stickman = {
+          x: this.width / 2,
+          y: this.height / 2,
+          headRadius: 20,
+          bodyLength: 60,
+          armLength: 40,
+          legLength: 50,
+          color: '#ff5500'
+        };
+        
+        this.animation = 'idle';
+        this.frame = 0;
+        this.isAnimating = false;
+        
+        this.init();
+      }
+      
+      init() {
+        this.startAnimation();
+      }
+      
+      startAnimation() {
+        this.isAnimating = true;
+        this.animate();
+      }
+      
+      animate() {
+        if (!this.isAnimating) return;
+        
+        this.frame++;
+        this.draw();
+        requestAnimationFrame(() => this.animate());
+      }
+      
+      draw() {
+        // Clear canvas
+        this.ctx.fillStyle = '#0f172a';
+        this.ctx.fillRect(0, 0, this.width, this.height);
+        
+        // Draw stickman based on current animation
+        switch (this.animation) {
+          case 'idle':
+            this.drawIdle();
+            break;
+          case 'walk':
+            this.drawWalk();
+            break;
+          case 'run':
+            this.drawRun();
+            break;
+          case 'jump':
+            this.drawJump();
+            break;
+          case 'dance':
+            this.drawDance();
+            break;
+        }
+      }
+      
+      drawIdle() {
+        const time = this.frame * 0.05;
+        const breathing = Math.sin(time) * 2;
+        
+        // Head
+        this.ctx.fillStyle = this.stickman.color;
+        this.ctx.beginPath();
+        this.ctx.arc(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius + breathing, this.stickman.headRadius, 0, Math.PI * 2);
+        this.ctx.fill();
+        
+        // Body
+        this.ctx.strokeStyle = this.stickman.color;
+        this.ctx.lineWidth = 3;
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 + breathing);
+        this.ctx.lineTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + breathing);
+        this.ctx.stroke();
+        
+        // Arms
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x - 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + breathing);
+        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength, this.stickman.y - this.stickman.bodyLength/2 + 40 + breathing);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + breathing);
+        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength, this.stickman.y - this.stickman.bodyLength/2 + 40 + breathing);
+        this.ctx.stroke();
+        
+        // Legs
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + breathing);
+        this.ctx.lineTo(this.stickman.x - 15, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + breathing);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + breathing);
+        this.ctx.lineTo(this.stickman.x + 15, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + breathing);
+        this.ctx.stroke();
+      }
+      
+      drawWalk() {
+        const time = this.frame * 0.1;
+        const step = Math.sin(time) * 20;
+        const armSwing = Math.sin(time) * 15;
+        
+        // Head
+        this.ctx.fillStyle = this.stickman.color;
+        this.ctx.beginPath();
+        this.ctx.arc(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius, this.stickman.headRadius, 0, Math.PI * 2);
+        this.ctx.fill();
+        
+        // Body
+        this.ctx.strokeStyle = this.stickman.color;
+        this.ctx.lineWidth = 3;
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2);
+        this.ctx.lineTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2);
+        this.ctx.stroke();
+        
+        // Arms
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x - 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20);
+        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength + step + armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20);
+        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength + step - armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40);
+        this.ctx.stroke();
+        
+        // Legs
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2);
+        this.ctx.lineTo(this.stickman.x - 15 + step + step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2);
+        this.ctx.lineTo(this.stickman.x + 15 + step - step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength);
+        this.ctx.stroke();
+      }
+      
+      drawRun() {
+        const time = this.frame * 0.15;
+        const step = Math.sin(time) * 30;
+        const armSwing = Math.sin(time) * 25;
+        const bounce = Math.abs(Math.sin(time)) * 10;
+        
+        // Head
+        this.ctx.fillStyle = this.stickman.color;
+        this.ctx.beginPath();
+        this.ctx.arc(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius - bounce, this.stickman.headRadius, 0, Math.PI * 2);
+        this.ctx.fill();
+        
+        // Body
+        this.ctx.strokeStyle = this.stickman.color;
+        this.ctx.lineWidth = 3;
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + step, this.stickman.y - this.stickman.bodyLength/2 - bounce);
+        this.ctx.lineTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2 - bounce);
+        this.ctx.stroke();
+        
+        // Arms
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x - 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20 - bounce);
+        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength + step + armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40 - bounce);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + 15 + step, this.stickman.y - this.stickman.bodyLength/2 + 20 - bounce);
+        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength + step - armSwing, this.stickman.y - this.stickman.bodyLength/2 + 40 - bounce);
+        this.ctx.stroke();
+        
+        // Legs
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2 - bounce);
+        this.ctx.lineTo(this.stickman.x - 15 + step + step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength - bounce);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + step, this.stickman.y + this.stickman.bodyLength/2 - bounce);
+        this.ctx.lineTo(this.stickman.x + 15 + step - step, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength - bounce);
+        this.ctx.stroke();
+      }
+      
+      drawJump() {
+        const time = this.frame * 0.08;
+        const jumpHeight = Math.sin(time) * 80;
+        const rotation = Math.sin(time) * 0.3;
+        
+        this.ctx.save();
+        this.ctx.translate(this.stickman.x, this.stickman.y);
+        this.ctx.rotate(rotation);
+        
+        // Head
+        this.ctx.fillStyle = this.stickman.color;
+        this.ctx.beginPath();
+        this.ctx.arc(0, -this.stickman.bodyLength/2 - this.stickman.headRadius - jumpHeight, this.stickman.headRadius, 0, Math.PI * 2);
+        this.ctx.fill();
+        
+        // Body
+        this.ctx.strokeStyle = this.stickman.color;
+        this.ctx.lineWidth = 3;
+        this.ctx.beginPath();
+        this.ctx.moveTo(0, -this.stickman.bodyLength/2 - jumpHeight);
+        this.ctx.lineTo(0, this.stickman.bodyLength/2 - jumpHeight);
+        this.ctx.stroke();
+        
+        // Arms
+        this.ctx.beginPath();
+        this.ctx.moveTo(-15, -this.stickman.bodyLength/2 + 20 - jumpHeight);
+        this.ctx.lineTo(-15 - this.stickman.armLength, -this.stickman.bodyLength/2 + 40 - jumpHeight);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(15, -this.stickman.bodyLength/2 + 20 - jumpHeight);
+        this.ctx.lineTo(15 + this.stickman.armLength, -this.stickman.bodyLength/2 + 40 - jumpHeight);
+        this.ctx.stroke();
+        
+        // Legs
+        this.ctx.beginPath();
+        this.ctx.moveTo(0, this.stickman.bodyLength/2 - jumpHeight);
+        this.ctx.lineTo(-15, this.stickman.bodyLength/2 + this.stickman.legLength - jumpHeight);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(0, this.stickman.bodyLength/2 - jumpHeight);
+        this.ctx.lineTo(15, this.stickman.bodyLength/2 + this.stickman.legLength - jumpHeight);
+        this.ctx.stroke();
+        
+        this.ctx.restore();
+      }
+      
+      drawDance() {
+        const time = this.frame * 0.12;
+        const bounce = Math.sin(time) * 15;
+        const armWave = Math.sin(time * 2) * 30;
+        const legKick = Math.sin(time) * 20;
+        
+        // Head
+        this.ctx.fillStyle = this.stickman.color;
+        this.ctx.beginPath();
+        this.ctx.arc(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 - this.stickman.headRadius + bounce, this.stickman.headRadius, 0, Math.PI * 2);
+        this.ctx.fill();
+        
+        // Body
+        this.ctx.strokeStyle = this.stickman.color;
+        this.ctx.lineWidth = 3;
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x, this.stickman.y - this.stickman.bodyLength/2 + bounce);
+        this.ctx.lineTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + bounce);
+        this.ctx.stroke();
+        
+        // Arms
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x - 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + bounce);
+        this.ctx.lineTo(this.stickman.x - 15 - this.stickman.armLength + armWave, this.stickman.y - this.stickman.bodyLength/2 + 40 + bounce);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x + 15, this.stickman.y - this.stickman.bodyLength/2 + 20 + bounce);
+        this.ctx.lineTo(this.stickman.x + 15 + this.stickman.armLength - armWave, this.stickman.y - this.stickman.bodyLength/2 + 40 + bounce);
+        this.ctx.stroke();
+        
+        // Legs
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + bounce);
+        this.ctx.lineTo(this.stickman.x - 15 + legKick, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + bounce);
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.stickman.x, this.stickman.y + this.stickman.bodyLength/2 + bounce);
+        this.ctx.lineTo(this.stickman.x + 15 - legKick, this.stickman.y + this.stickman.bodyLength/2 + this.stickman.legLength + bounce);
+        this.ctx.stroke();
+      }
+      
+      setAnimation(type) {
+        this.animation = type;
+        this.frame = 0;
+      }
+    }
+
+    // Initialize animation when page loads
+    let stickmanAnim;
+    
+    function startAnimation() {
+      const canvas = document.getElementById('animationCanvas');
+      stickmanAnim = new StickmanAnimation(canvas);
+      
+      // Hide loading
+      document.getElementById('loading').classList.remove('show');
+      
+      // Scroll to animation section
+      document.getElementById('animations').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function setAnimation(type) {
+      if (stickmanAnim) {
+        stickmanAnim.setAnimation(type);
+        
+        // Update active button
+        document.querySelectorAll('.control-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+      }
+    }
+    
+    // Auto-start animation when page loads
+    window.addEventListener('load', () => {
+      setTimeout(startAnimation, 1000);
+    });
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
