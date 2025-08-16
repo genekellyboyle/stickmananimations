@@ -3,114 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GK Animates - Stickman Epic Legends | Animation Island Adventures</title>
+  <meta name="description" content="Join Stickman's epic adventures on Animation Island! Watch the legendary hero battle Purple and save Animation Island with fluid motion, awesome camera angles, and nonstop action. Subscribe to GK Animates for monthly episodes!">
   
-  <!-- Redirect to the built application path -->
-  <meta http-equiv="refresh" content="0;url=dist/public/index.html">
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="GK Animates - Stickman Epic Legends | Animation Island Adventures" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stickmananimations.vercel.app" />
+  <meta property="og:image" content="https://stickmananimations.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Stickman Epic Legends - The legendary hero of Animation Island battling evil forces with epic stick figure animation" />
+  <meta property="og:description" content="Join the adventures of Stickman, the legendary hero of Animation Island! Epic animated battles between good and evil with fluid motion and awesome camera angles." />
+  <meta property="og:site_name" content="GK Animates" />
+  <meta property="og:locale" content="en_US" />
   
-  <title>GK Animates by Gene Kelly Boyle | Animation Portfolio</title>
-  <meta name="description" content="Professional animation portfolio showcasing the work of Gene Kelly Boyle, animator and storyteller. Explore character animations, motion graphics, and short films.">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GK Animates - Stickman Epic Legends" />
+  <meta name="twitter:description" content="Join Stickman's epic adventures on Animation Island! Epic battles, fluid animation, and nonstop adventure." />
+  <meta name="twitter:image" content="https://stickmananimations.vercel.app/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Stickman Epic Legends - Animation Island Adventures" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="./pages/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+             <a href="index.html" class="logo">🎬 GK Animates</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/youtube.html">YouTube</a></li>
+        <li><a href="pages/animations.html">Animations</a></li>
+        <li><a href="pages/features.html">Features</a></li>
+        <li><a href="pages/about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Stickman Epic Legends</h1>
+      <div class="subtitle">The Legendary Hero of Animation Island</div>
+      <p>Join the epic adventures of Stickman as he battles the forces of Purple to save Animation Island! Experience fluid motion, awesome camera angles, and nonstop action in this tribute to classic YouTube animators.</p>
+      <div class="cta-buttons">
+        <a href="https://www.youtube.com/@genekellyboyle" target="_blank" class="btn btn-youtube">🔔 Subscribe to GK Animates</a>
+        <a href="pages/animations.html" class="btn btn-primary">Try Animations</a>
+        <a href="pages/youtube.html" class="btn btn-secondary">Watch Episodes</a>
+      </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section class="overview-section">
+      <h2 class="section-title">Welcome to Animation Island</h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">🎬</div>
+          <h3>Epic Storytelling</h3>
+          <p>Join Stickman's legendary quest to save Animation Island from the forces of Purple with monthly episodes</p>
+          <a href="pages/features.html" class="btn btn-secondary">Learn More</a>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">⚡</div>
+          <h3>Fluid Animation</h3>
+          <p>Experience smooth, 60fps stick figure animations with awesome camera angles and dynamic motion</p>
+          <a href="pages/animations.html" class="btn btn-secondary">Try Now</a>
+        </div>
+        
+        <div class="overview-card">
+          <div class="overview-icon">🥊</div>
+          <h3>Epic Battles</h3>
+          <p>Witness over-the-top fight scenes with stick figure characters in intense action sequences</p>
+          <a href="pages/youtube.html" class="btn btn-secondary">Watch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <h2>Ready to Join the Adventure?</h2>
+             <p>The epic animated battles between good and evil are just beginning! Subscribe to GK Animates and watch Stickman take stick figure animation to new levels.</p>
+      <div class="cta-buttons">
+        <a href="https://www.youtube.com/@genekellyboyle" target="_blank" class="btn btn-youtube">🔔 Subscribe to GK Animates</a>
+        <a href="pages/about.html" class="btn btn-primary">Meet the Creator</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 <a href="https://www.youtube.com/@genekellyboyle" target="_blank" class="youtube-link">GK Animates</a> - Stickman Epic Legends</p>
+    <p>Join the adventures of Stickman, the legendary hero of Animation Island!</p>
+    <p>Together we can defeat the forces of Purple and keep Animation Island safe for all! 🛡️⚔️</p>
+  </footer>
+
+  <script>
+    // Debug navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Page loaded, checking navigation links...');
+      
+      // Test all navigation links
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        console.log('Navigation link:', link.href, link.textContent);
+        
+        // Add click event to test navigation
+        link.addEventListener('click', function(e) {
+          console.log('Clicked link:', this.href, this.textContent);
+          
+          // Test if the link actually works
+          if (this.href && !this.href.startsWith('http')) {
+            console.log('Attempting to navigate to:', this.href);
+            // Try to fetch the page to see if it exists
+            fetch(this.href)
+              .then(response => {
+                if (response.ok) {
+                  console.log('Page exists, navigating...');
+                  window.location.href = this.href;
+                } else {
+                  console.error('Page not found:', this.href);
+                }
+              })
+              .catch(error => {
+                console.error('Error navigating to:', this.href, error);
+              });
+          }
+        });
+      });
+      
+      // Test other links
+      const allLinks = document.querySelectorAll('a');
+      allLinks.forEach(link => {
+        if (link.href && !link.href.startsWith('http')) {
+          console.log('Internal link:', link.href, link.textContent);
+        }
+      });
+      
+      // Check if CSS is loaded
+      const stylesheets = document.styleSheets;
+      console.log('Loaded stylesheets:', stylesheets.length);
+      for (let i = 0; i < stylesheets.length; i++) {
+        try {
+          console.log('Stylesheet', i, ':', stylesheets[i].href);
+        } catch (e) {
+          console.log('Stylesheet', i, ': (cross-origin)');
+        }
+      }
+    });
+  </script>
+
   <style>
-    body {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #0f172a;
-      color: white;
-      text-align: center;
+    .overview-section {
+      padding: 4rem 0;
     }
-    .container {
-      max-width: 800px;
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .overview-card {
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 15px;
       padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
     }
-    h1 {
-      font-size: 2.5rem;
+
+    .overview-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff5500;
+      box-shadow: 0 10px 25px rgba(255, 85, 0, 0.2);
+    }
+
+    .overview-icon {
+      font-size: 3rem;
       margin-bottom: 1rem;
-      font-family: 'Comfortaa', cursive;
       color: #ff5500;
     }
-    p {
-      font-size: 1.1rem;
+
+    .overview-card h3 {
+      margin-bottom: 1rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .overview-card p {
+      color: #cbd5e1;
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
-    .loading {
-      display: inline-block;
-      position: relative;
-      width: 80px;
-      height: 80px;
-      margin: 2rem auto;
+
+    .cta-section {
+      padding: 4rem 0;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(255, 85, 0, 0.1), rgba(255, 140, 0, 0.1));
+      border-radius: 20px;
+      margin: 2rem 0;
     }
-    .loading div {
-      display: inline-block;
-      position: absolute;
-      left: 8px;
-      width: 16px;
-      background: #ff5500;
-      animation: loading 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-    }
-    .loading div:nth-child(1) {
-      left: 8px;
-      animation-delay: -0.24s;
-    }
-    .loading div:nth-child(2) {
-      left: 32px;
-      animation-delay: -0.12s;
-    }
-    .loading div:nth-child(3) {
-      left: 56px;
-      animation-delay: 0;
-    }
-    @keyframes loading {
-      0% {
-        top: 8px;
-        height: 64px;
-      }
-      50%, 100% {
-        top: 24px;
-        height: 32px;
-      }
-    }
-    .manual-btn {
-      background-color: #ff5500;
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 0.375rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
     }
-    .manual-btn:hover {
-      background-color: #ff7730;
+
+    .cta-section p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
-</head>
-<body>
-  <div class="container">
-    <h1>GK Animates</h1>
-    <div class="loading"><div></div><div></div><div></div></div>
-    <p>Loading the animation portfolio...</p>
-    <p>You will be redirected automatically in a moment.</p>
-    <a href="dist/public/index.html" class="manual-btn">Go to Animation Portfolio</a>
-  </div>
-  
-  <!-- JavaScript redirect as fallback -->
-  <script>
-    // Redirect to the built application
-    window.location.href = 'dist/public/index.html';
-  </script>
 </body>
 </html>
