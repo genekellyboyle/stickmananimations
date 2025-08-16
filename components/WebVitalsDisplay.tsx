@@ -156,7 +156,7 @@ export const WebVitalsDisplay: React.FC = () => {
             title={metric.title}
             value={metric.value}
             unit={metric.unit}
-            rating={getMetricRating(metric.key, metric.value || 0)}
+            rating={getMetricRating(metric.key, metric.value || 0) as 'good' | 'needs-improvement' | 'poor'}
             description={metric.description}
             threshold={metric.threshold}
           />
