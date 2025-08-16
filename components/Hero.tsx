@@ -1,115 +1,159 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Play, Sparkles, Zap, Star } from 'lucide-react';
 
-export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  const floatingVariants = {
+    float: {
+      y: [-10, 10, -10],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Dynamic Background Effect */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 transition-all duration-1000"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.3) 0%, transparent 50%)`
-        }}
-      />
-      
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }} />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary/20 to-animation-secondary/20 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-animation-accent/20 to-primary/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-animation-primary/10 to-animation-secondary/10 rounded-full blur-3xl" />
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
-        {/* Animated Title */}
-        <div className="mb-8">
-          <h1 className="text-7xl md:text-9xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-            GK ANIMATES
-          </h1>
-          <div className="h-2 w-64 mx-auto bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full animate-pulse" />
-        </div>
+      {/* Floating Icons */}
+      <motion.div
+        variants={floatingVariants}
+        animate="float"
+        className="absolute top-20 left-20 text-primary/30"
+      >
+        <Sparkles size={32} />
+      </motion.div>
+      <motion.div
+        variants={floatingVariants}
+        animate="float"
+        style={{ animationDelay: '1s' }}
+        className="absolute top-32 right-32 text-animation-secondary/30"
+      >
+        <Zap size={28} />
+      </motion.div>
+      <motion.div
+        variants={floatingVariants}
+        animate="float"
+        style={{ animationDelay: '2s' }}
+        className="absolute bottom-32 left-32 text-animation-accent/30"
+      >
+        <Star size={24} />
+      </motion.div>
 
-        {/* Subtitle */}
-        <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-          Where <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">Creativity</span> meets{' '}
-          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Technology</span>, and{' '}
-          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Animation</span> comes to life
-        </p>
+      <div className="container-enhanced relative z-10">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-center max-w-5xl mx-auto"
+        >
+          {/* Badge */}
+          <motion.div variants={itemVariants} className="mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 backdrop-blur-enhanced">
+              <Sparkles size={16} />
+              <span className="text-sm font-medium">AI-Powered Animation Studio</span>
+            </div>
+          </motion.div>
 
-        {/* Animated Description */}
-        <div className="mb-16 space-y-4">
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            🎬 Award-winning animator specializing in character animation and motion graphics
-          </p>
-          <p className="text-lg text-white/70">
-            🚀 Core Web Vitals monitoring active - Check the performance dashboard!
-          </p>
-        </div>
+          {/* Main Heading */}
+          <motion.h1 variants={itemVariants} className="mb-6">
+            <span className="text-gradient font-bold">
+              Bring Your Stories to Life
+            </span>
+            <br />
+            <span className="text-foreground">
+              with Cutting-Edge Animation
+            </span>
+          </motion.h1>
 
-        {/* Interactive CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-6 mb-16">
-          {[
-            { text: 'View Portfolio', color: 'from-blue-500 to-purple-500', icon: '🎨' },
-            { text: 'Watch Animations', color: 'from-purple-500 to-pink-500', icon: '🎬' },
-            { text: 'Get in Touch', color: 'from-pink-500 to-red-500', icon: '💬' }
-          ].map((button, index) => (
-            <button
-              key={index}
-              className={`group relative px-8 py-4 rounded-full bg-gradient-to-r ${button.color} text-white font-bold text-lg transform hover:scale-110 hover:shadow-2xl transition-all duration-300 hover:shadow-purple-500/50 overflow-hidden`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
-                  {button.icon}
-                </span>
-                {button.text}
-              </span>
-              
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {/* Subtitle */}
+          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            Create stunning stickman animations, interactive experiences, and visual storytelling 
+            that captivates your audience. Powered by the latest AI technology.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button className="btn btn-primary btn-lg group">
+              Start Creating
+              <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
             </button>
-          ))}
-        </div>
+            <button className="btn btn-outline btn-lg group">
+              <Play size={20} className="mr-2" />
+              Watch Demo
+            </button>
+          </motion.div>
 
-        {/* Floating Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-white/30 rounded-full animate-bounce"
-              style={{
-                left: `${20 + (i * 15)}%`,
-                top: `${30 + (i * 10)}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${2 + i * 0.5}s`
-              }}
+          {/* Stats */}
+          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gradient mb-2">10K+</div>
+              <div className="text-muted-foreground">Animations Created</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gradient mb-2">50+</div>
+              <div className="text-muted-foreground">Countries Reached</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gradient mb-2">99%</div>
+              <div className="text-muted-foreground">Satisfaction Rate</div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="flex flex-col items-center gap-2 text-muted-foreground">
+          <span className="text-sm">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center">
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-1 h-3 bg-muted-foreground/50 rounded-full mt-2"
             />
-          ))}
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
-}
+};
+
+export default Hero;
