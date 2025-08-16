@@ -14,6 +14,11 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  webpack: (config, { isServer }) => {
+    // Exclude superdesign source from build
+    config.watchOptions = { ignored: ['**/superdesign/**', '**/.superdesign/**'] };
+    return config;
+  },
 };
 
 export default nextConfig;
