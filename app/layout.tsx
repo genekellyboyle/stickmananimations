@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins, Comfortaa } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const inter = Inter({ 
@@ -174,6 +175,9 @@ export default function RootLayout({
             `
           }}
         />
+        
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
       </body>
     </html>
   )
