@@ -1,5 +1,5 @@
 {
-  "name": "rest-express",
+  "name": "stickman-animations",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -98,14 +97,9 @@
     "critters": "^0.0.23",
     "drizzle-kit": "^0.30.4",
     "esbuild": "^0.25.0",
-    "eslint": "^9.33.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "tsx": "^4.19.1",
-    "typescript": "5.6.3",
-    "vite": "^5.4.14"
-  },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.8"
+    "eslint": "^9.0.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.20",
+    "typescript": "^5.6.3"
   }
 }
