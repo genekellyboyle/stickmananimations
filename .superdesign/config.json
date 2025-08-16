@@ -1,0 +1,67 @@
+{
+  "project": {
+    "name": "Stickman Animation Studio",
+    "type": "animation-website",
+    "framework": "nextjs",
+    "styling": "tailwindcss"
+  },
+  "designSystem": {
+    "colors": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "accent": "#10B981",
+      "background": "#FFFFFF",
+      "foreground": "#1F2937",
+      "muted": "#F3F4F6"
+    },
+    "typography": {
+      "fontFamily": "Inter, system-ui, sans-serif",
+      "headings": "font-bold tracking-tight",
+      "body": "leading-relaxed"
+    },
+    "spacing": {
+      "section": "py-16 md:py-24 lg:py-32",
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    }
+  },
+  "components": {
+    "preferences": {
+      "style": "modern-minimalist",
+      "animations": "smooth-micro-interactions",
+      "accessibility": "high",
+      "responsive": "mobile-first"
+    },
+    "common": [
+      "buttons",
+      "cards",
+      "forms",
+      "navigation",
+      "modals",
+      "animations"
+    ]
+  },
+  "prompts": {
+    "default": "Design a modern, accessible component for a stickman animation website using Tailwind CSS. Focus on smooth animations, clean typography, and engaging user interactions.",
+    "animation": "Create an animated component that showcases stickman animations with smooth transitions, hover effects, and engaging micro-interactions.",
+    "landing": "Design a landing page section that highlights animation services with modern UI patterns, clear CTAs, and visual hierarchy.",
+    "portfolio": "Create a portfolio showcase component with grid layouts, filtering, and smooth animations for displaying animation work."
+  },
+  "output": {
+    "format": "tsx",
+    "styling": "tailwindcss",
+    "includeProps": true,
+    "includeTypes": true,
+    "includeAccessibility": true
+  },
+  "optimization": {
+    "performance": {
+      "lazyLoading": true,
+      "imageOptimization": true,
+      "animationOptimization": true
+    },
+    "seo": {
+      "semanticHTML": true,
+      "structuredData": true
+    }
+  }
+}

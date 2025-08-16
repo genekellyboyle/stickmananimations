@@ -1,0 +1,33 @@
+{
+  "workspace": {
+    "name": "Stickman Animation Studio",
+    "type": "animation-website",
+    "framework": "nextjs",
+    "styling": "tailwindcss"
+  },
+  "superdesign": {
+    "enabled": true,
+    "autoSave": true,
+    "previewMode": "split",
+    "defaultFormat": "tsx",
+    "includeTypes": true,
+    "includeAccessibility": true,
+    "animationPreferences": "smooth-micro-interactions",
+    "stylePreferences": "modern-minimalist"
+  },
+  "shortcuts": {
+    "hero": "Ctrl+Shift+H",
+    "showcase": "Ctrl+Shift+S", 
+    "portfolio": "Ctrl+Shift+P",
+    "contact": "Ctrl+Shift+C",
+    "navigation": "Ctrl+Shift+N",
+    "footer": "Ctrl+Shift+F"
+  },
+  "templates": {
+    "button": "Ctrl+Shift+B",
+    "card": "Ctrl+Shift+D",
+    "input": "Ctrl+Shift+I",
+    "modal": "Ctrl+Shift+M",
+    "tabs": "Ctrl+Shift+T"
+  }
+}

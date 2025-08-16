@@ -1,0 +1,24 @@
+{
+  "quickPrompts": {
+    "hero": "Design a hero section for stickman animation website with floating elements, mouse tracking, and smooth animations",
+    "showcase": "Create an animation showcase grid with 3D card effects, hover animations, and filtering",
+    "portfolio": "Design a portfolio grid with masonry layout, project overlays, and smooth transitions",
+    "contact": "Create a contact form with animated inputs, validation states, and smooth submissions",
+    "navigation": "Design an animated navigation menu with smooth transitions and mobile responsiveness",
+    "footer": "Create a footer with social links, newsletter signup, and smooth hover effects"
+  },
+  "componentTemplates": {
+    "button": "Design a modern button component with hover effects, loading states, and accessibility",
+    "card": "Create an animated card component with hover effects, shadows, and smooth transitions",
+    "input": "Design an input field with focus animations, validation states, and smooth transitions",
+    "modal": "Create a modal dialog with backdrop blur, smooth animations, and accessibility features",
+    "tabs": "Design tab navigation with smooth transitions, active states, and responsive behavior"
+  },
+  "animationTypes": {
+    "entrance": "Design entrance animations with staggered reveals and smooth easing",
+    "hover": "Create hover effects with scale, shadow, and color transitions",
+    "scroll": "Design scroll-triggered animations with intersection observer",
+    "loading": "Create loading states with skeleton screens and smooth transitions",
+    "micro": "Design micro-interactions for buttons, inputs, and interactive elements"
+  }
+}
