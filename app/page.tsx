@@ -4,6 +4,7 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Contact from '@/components/Contact';
+import ButtonShowcase from '@/components/ButtonShowcase';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Contact />
+      <ButtonShowcase />
     </main>
   );
 }
