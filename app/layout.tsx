@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Gene Kelly Boyle' }],
   creator: 'Gene Kelly Boyle',
   publisher: 'GK Animates',
-  metadataBase: new URL('https://stickmananimations.vercel.app'),
+  metadataBase: new URL('https://stickmananimations.com'),
   robots: {
     index: true,
     follow: true,
